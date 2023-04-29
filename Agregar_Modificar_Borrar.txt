@@ -1,0 +1,10 @@
+/*Agregar usuarios*/
+INSERT INTO Mae_usuarios(Login_usuario, clave_usuario, nombre_usuario)
+VALUES (1, '123456', 'carolina')
+/*Borrar usuarios*/
+DELETE FROM USUARIOS WHERE Login_usuario = 1
+
+/*Modificar usuarios*/
+UPDATE Mae_usuarios
+SET clave_usuario = '222222', nombre_usuario = caro12
+WHERE nombre_usuario = 'carolina';

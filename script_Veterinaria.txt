@@ -1,0 +1,20 @@
+Create table Mae_usuarios (
+Login_usuario int not null, clave_usuario varchar(6) not null,
+nombre_usuario varchar(200) not null
+
+PRIMARY KEY (Login_usuario)
+)
+
+
+Create table Mae_mascotas (
+ID_Mascota int UNIQUE not null, nombre_mascota varchar(100) not null,
+tipo_mascota varchar(200) not null, 
+comida_favorita varchar(200) not null
+)
+
+Create table Control_Citas (
+ID_Mascota int not null, proxima_fecha date not null,
+medico_asignado varchar(200) not null
+
+FOREIGN KEY (ID_Mascota) REFERENCES Mae_mascotas(ID_Mascota)
+)

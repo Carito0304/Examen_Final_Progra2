@@ -1,0 +1,12 @@
+/*Para reporte de usuarios*/
+
+SELECT nombre_usuario FROM Mae_usuarios
+
+
+/*Para reporte de mascotas*/
+
+SELECT nombre_mascota, tipo_mascota, comida_favorita FROM Mae_mascotas
+
+/*Para reporte de control de citas*/
+
+SELECT masc.nombre_mascota, citas.proxima_fecha, citas.medico_asignado FROM Mae_mascotas masc, Control_Citas citas WHERE masc.ID_Mascota = citas.ID_Mascota
